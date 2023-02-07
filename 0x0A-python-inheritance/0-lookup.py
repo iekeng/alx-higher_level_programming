@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 '''
 The lookup module checks all attributes of an object
 '''

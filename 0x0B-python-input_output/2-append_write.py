@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Defines a file writing function which appends to an existing file"""
 
 

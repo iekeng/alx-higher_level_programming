@@ -2,7 +2,7 @@
 """
 Defines a rectangle class
 """
-from .base import Base
+from base import Base
 """
 Represent a rectangle
 """

@@ -90,6 +90,8 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
+        if self.height == 0 and self.width == 0:
+            return
         for h in range(self.height):
             for w in range(self.width):
                 print('#')

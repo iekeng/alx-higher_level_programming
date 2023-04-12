@@ -5,7 +5,7 @@
 * There is a large community that offers support and advice.
 * It is one of the most accessibleentries into coding.
 
-####Project Directory
+#### Project Directory
 * [0-javascript_is_amazing.js](./0-javascript_is_amazing.js) 
 * [1-multi_languages.js](./1-multi_languages.js)
 * [2-arguments.js](./2-arguments.js)

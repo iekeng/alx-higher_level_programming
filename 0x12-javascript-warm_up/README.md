@@ -20,3 +20,5 @@
 * [11-second_biggest.js](./11-second_biggest.js)
 * [12-object.js](./12-object.js)
 * [13-add.js](./13-add.js)
+* [100-let_me_const.js](./100-let_me_const.js)
+* [101-call_me_moby.js](./101-call_me_moby.js)

@@ -15,5 +15,9 @@ if __name__ == '__main__':
                    ON states.id = cities.state_id
                    WHERE state.name = %s""", (state_name,))
 
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
+
     cursor.close()
     db.close()

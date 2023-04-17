@@ -1,12 +1,12 @@
 #!/usr/bin/python3
+"""Displays all values in the states table where name matches the argument"""
 import MySQLdb
 import sys
-"""Displays all values in the states table where name matches the argument"""i
 
 
 if __name__ == '__main__':
     db = MySQLdb.connect(host="localhost", passwd=sys.argv[2],
-                         user=sys.argv[1], port=3306, db="hbtn_0e_0_usa")
+                         user=sys.argv[1], port=3306, db=sys.argv[3])
     cursor = db.cursor()
 
     cursor.execute("SELECT * FROM states WHERE name LIKE BINARY'{}'"

@@ -16,8 +16,8 @@ if __name__ == '__main__':
                    WHERE state.name = %s""", (state_name,))
 
     rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    tmp = list(row[0] for row in rows)
+    print(*tmp, sep=', ')
 
     cursor.close()
     db.close()

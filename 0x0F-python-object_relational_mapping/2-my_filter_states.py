@@ -9,10 +9,11 @@ if __name__ == '__main__':
                          user=sys.argv[1], port=3306, db="hbtn_0e_0_usa")
     cursor = db.cursor()
 
-    rows = cursor.execute("SELECT * FROM states WHERE name LIKE BINARY
-                          '{}'".format(sys.argv[4]))
-
+    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY'{}'"
+                   .format(sys.argv[4]))
+    rows = cursor.fetchall()
     for row in rows:
         print(row)
+
     cursor.close()
     db.close()

@@ -1,3 +1,3 @@
 #!/bin/bash
 # modify header
-curl -sX "X-School-User-Id: 98" "$1"
+curl -sH "X-School-User-Id: 98" "$1"

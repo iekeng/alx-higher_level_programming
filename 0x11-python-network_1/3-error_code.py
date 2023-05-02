@@ -5,11 +5,8 @@ if __name__ == "__main__":
     import sys
 
     url = sys.argv[1]
-
-    req = urllib.request.Request(url)
-
-    with urllib.request.urlopen(req) as response:
-        try:
-            response
-        except urllib.error.HTTPError as e:
-            print('Error code: ', e.code)
+    try:
+        with urllib.request.urlopen(url) as response:
+            print(response.read().decode('utf-8'))
+    except urllib.error.HTTPError as e:
+        print('Error code: ', e.code)

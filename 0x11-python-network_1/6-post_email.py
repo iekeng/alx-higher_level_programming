@@ -8,9 +8,3 @@ if __name__ == "__main__":
     data = {"email": sys.argv[2]}
     r = requests.post(url, data=data)
     print("{}".format(r.text))
-
-
-
-
-
-

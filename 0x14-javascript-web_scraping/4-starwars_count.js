@@ -1,26 +1,15 @@
 #!/usr/bin/node
-//number of movies actoer with useId 18 appears in
+// writes a string to a file
 
 const request = require('request');
+const process = require('process');
 
-const filmsUrl = process.argv[2];
-const personId = 18;
-const personUrl = 'https://swapi-api.alx-tools.com/api/people/' + personId + '/';
-let n = 0;
-
-request(filmsUrl, (err, res, bdy) => {
-  if (err) {
-    console.log(err);
-    return;
+const url = process.argv[2];
+request(url, (error, response, body) => {
+  if (error) {
+    console.log(error);
   }
-  const body = JSON.parse(bdy);
-  const results = body.results;
-  for (const result of results) {
-    for (const character of result.characters) {
-      if (character === personUrl) {
-        n = n + 1;
-      }
-    }
-  }
-  console.log(n);
+  let data = JSON.parse(body).results;
+  data = data.filter(({ characters }) => characters.includes('https://swapi-api.alx-tools.com/api/people/18/'));
+  console.log(data.length);
 });

@@ -1,9 +1,16 @@
 #!/usr/bin/node
-//pipe from url to file
 
 const request = require('request');
 const fs = require('fs');
-const url = process.argv[2];
-const file = process.argv[3];
+const argv = require('process').argv;
 
-request.get(url).pipe(fs.createWriteStream(file));
+request(argv[2], (err, res, body) => {
+  if (err) {
+    throw err;
+  }
+  fs.writeFile(argv[3], body, 'utf8', (err) => {
+    if (err) {
+      throw err;
+    }
+  });
+});

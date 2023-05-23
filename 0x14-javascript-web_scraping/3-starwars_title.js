@@ -11,4 +11,4 @@ request(url, (err, res, bdy) => {
   }
   const body = JSON.parse(bdy);
   console.log(body.title);
-})
+});

@@ -1,8 +1,7 @@
 #!/usr/bin/node
-//writes to file using file system
+// writes to file using file system
 
 const fs = require('fs');
-
 fs.writeFile (process.argv[2], process.argv[3], 'utf-8', (error) => {
-    if (error) console.error(error);
+  if (error) console.error(error);
 });
